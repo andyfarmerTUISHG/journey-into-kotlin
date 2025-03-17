@@ -7,6 +7,16 @@ fun main(){
 	println("MaxDouble value is $maxDouble")
 	val maxTripleInt = getMax(9,6,17)
 	println("maxTripleInt value is $maxTripleInt")
+
+	sendMessage("Alexa", "Hello")
+	sendMessage("Alexa")
+	sendMessage()
+	sendMessage(message = "Named message")
+	sendMessage(message = "Named message", name="Siri")
+}
+
+fun sendMessage(name: String ="User", message: String = ""){
+	println("$name and message =  $message")
 }
 
 fun getMax(num1: Int, num2: Int):Int{

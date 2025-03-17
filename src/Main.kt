@@ -1,6 +1,29 @@
 package src
 
 fun main(){
+	terminalSplit("Loops")
+	loopDetails()
+}
+fun loopDetails(){
+println("for loop")
+	for(i in 1..10){
+		println("I am looping i = $i")
+	}
+	println("until loop")
+	for (i in 1 until 10){
+		println("I am looping in an until i = $i")
+	}
+	println("downto loopcount backwards")
+	for(i in 10 downTo 1){
+		println("I am looping downwards i = $i")
+	}
+	println("step loop")
+	for ( i in 1 until 12 step 2) {
+		println("I am looping i = $i")
+	}
+
+}
+fun mainFunctions(){
 	val max = getMax(5,9)
 	println("Max value is $max")
 	val maxDouble = getMax(5.5,9.9)

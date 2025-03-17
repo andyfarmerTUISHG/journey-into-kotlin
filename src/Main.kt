@@ -21,7 +21,16 @@ println("for loop")
 	for ( i in 1 until 12 step 2) {
 		println("I am looping i = $i")
 	}
-
+	println("While Loop")
+	var number = 0
+	while( number < 10){
+		println(number++)
+	}
+	println("Do While Loop")
+	var maxNumber = 8
+	do {
+		println("Need this at least once $maxNumber")
+	} while ( maxNumber++ < 10)
 }
 fun mainFunctions(){
 	val max = getMax(5,9)

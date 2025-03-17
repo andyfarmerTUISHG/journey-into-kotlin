@@ -18,8 +18,10 @@ fun main() {
 //	surname = 2 // This will error
 
 	println("Hello $name $surname, your age is $age \nYour are a $type")
-	terminalSplit("Number Options")
+	terminalSplit("Int Options")
 	numberOptions()
+	terminalSplit("Float & Double Options")
+	floatOptions()
 }
 
 fun numberOptions(){
@@ -61,6 +63,18 @@ fun numberOptions(){
 	// or, as a long
 	var myNumberAsLong = 28L
 
+
+}
+
+fun floatOptions(){
+	println("Used when needing more precision in your numbers")
+
+	val myNumber = 3.141
+	// Through type inference the default is a double
+//	val myNumberAsFloat: Float = 3.141 // This errors, however if your want a float
+	val myNumberAsFloat = 3.141f
+
+	println("myName is a Double - $myNumber & myNumberAsFloat - $myNumberAsFloat")
 
 }
 

@@ -30,8 +30,18 @@ fun main() {
 	operatorsDetails()
 	terminalSplit("Comments")
 	commentsDetails()
+	terminalSplit("If Else Example")
+	ifelseDetails()
 }
 
+fun ifelseDetails(){
+	val isActive = false
+	if (isActive == true) {
+		println("User is Active")
+	} else {
+		println("User is Inactive")
+	}
+}
 fun commentsDetails(){
 	println("Not going to see much here!!!")
 	// End of line comment

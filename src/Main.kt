@@ -13,6 +13,22 @@ fun main(){
 	sendMessage()
 	sendMessage(message = "Named message")
 	sendMessage(message = "Named message", name="Siri")
+
+	println(sum(1,3,5,7))
+	println("The sum function is restricted to 4 parameters, if the number of th parameters is unkown you can use vararg")
+	println(sumVarArg(1,3,5,7,9,11))
+}
+
+fun sumVarArg(vararg numbers: Int):Int{
+	var sum = 0
+	for (number in numbers){
+		sum += number
+	}
+	return sum
+}
+
+fun sum(a: Int, b: Int, c: Int, d: Int):Int {
+	return a + b + c + d
 }
 
 fun sendMessage(name: String ="User", message: String = sendText()){

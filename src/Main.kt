@@ -28,8 +28,17 @@ fun main() {
 	dataTypesOptions()
 	terminalSplit("Operators")
 	operatorsDetails()
+	terminalSplit("Comments")
+	commentsDetails()
 }
 
+fun commentsDetails(){
+	println("Not going to see much here!!!")
+	// End of line comment
+	/*
+		Multi line comment
+	 */
+}
 fun operatorsDetails(){
 	var x = 5
 	val y = 3.0

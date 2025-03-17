@@ -22,6 +22,55 @@ fun main() {
 	numberOptions()
 	terminalSplit("Float & Double Options")
 	floatOptions()
+	terminalSplit("CHAR Options")
+	charOptions()
+	terminalSplit("Sumamry of Data Types")
+	dataTypesOptions()
+	terminalSplit("Operators")
+	operatorsDetails()
+}
+
+fun operatorsDetails(){
+	var x = 5
+	val y = 3.0
+	//Operand are x & y
+	val result = x + y
+	println("Result = $result")
+	println("As an Expression in a literal\nx + y = ${x +y}")
+	println("x - y = ${x - y}")
+	println("x * y = ${x * y}")
+	println("x / y = ${x / y}")
+	println("x % y = ${x % y}")
+
+	//opearator assignment variable example
+	var assignResult = x + y
+	println("assignResult = $assignResult")
+//	assignResult = assignResult + 2
+	assignResult += 2
+	println("assignResult + 2 = $assignResult")
+//	assignResult = assignResult - 2
+	assignResult -= 2
+	println("assignResult - 2 = $assignResult")
+//	assignResult = assignResult * 2
+	assignResult *= 2
+	println("assignResult * 2 = $assignResult")
+//	assignResult = assignResult / 2
+	assignResult /= 2
+	println("assignResult / 2 = $assignResult")
+//	assignResult = assignResult % 2
+	assignResult %= 2
+	println("assignResult % 2 = $assignResult")
+
+	println("Operator Precedence")
+	println("Multipliccation has precedence over addition $x + $y * 3 = ${x + y * 3}")
+	println("Force addition precedence over multiplication ($x + $y) * 3 = ${(x + y) * 3}")
+
+	println("Increment & Decrement $x")
+	println("x++ print then increment = ${x++}")
+	println("++x increment then print = ${++x}")
+	println("x-- print then decrement = ${x--}")
+	println("--x decrement then print = ${--x}")
+
 }
 
 fun numberOptions(){
@@ -76,6 +125,25 @@ fun floatOptions(){
 
 	println("myName is a Double - $myNumber & myNumberAsFloat - $myNumberAsFloat")
 
+}
+
+fun charOptions(){
+	val myCharValue: Char = 'D'
+	val myBooleanValue: Boolean = true
+	println("My Char Value (can only hold one character) = $myCharValue")
+	println("My Boolean Value = $myBooleanValue")
+}
+
+fun dataTypesOptions(){
+	println("8 Data Types")
+	println("Byte")
+	println("Short")
+	println("Int")
+	println("Long")
+	println("Float")
+	println("Double")
+	println("Char")
+	println("Boolean")
 }
 
 fun terminalSplit(terminalTitle: String ){

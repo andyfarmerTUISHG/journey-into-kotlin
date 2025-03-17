@@ -15,9 +15,11 @@ fun main(){
 	sendMessage(message = "Named message", name="Siri")
 }
 
-fun sendMessage(name: String ="User", message: String = ""){
+fun sendMessage(name: String ="User", message: String = sendText()){
 	println("$name and message =  $message")
 }
+
+fun sendText() = "Some default text from a function"
 
 fun getMax(num1: Int, num2: Int):Int{
 	return if(num1 > num2) num1 else num2

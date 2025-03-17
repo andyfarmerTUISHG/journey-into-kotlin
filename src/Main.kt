@@ -1,6 +1,9 @@
 package src
 
-fun main() {
+fun main(){
+
+}
+fun mainDataTypes() {
 	println("Welcome to Main - Learning")
 	println("Introducing Variables")
 	// Define Variable and its type
@@ -36,8 +39,22 @@ fun main() {
 	combinedOperator()
 	terminalSplit("Control Flow Example")
 	controlFlow()
+	terminalSplit("Null Example")
+	nullExample()
 }
 
+fun nullExample(){
+	var text: String? = null
+	text = "Name"
+//	println(text.length) // you cant use length on non null objects
+	//check for null objects
+	println(text?.length) // safe call
+//	println(text!!.length) // create null pointer exception
+
+	val text2 = text ?: "The variable is null"
+
+	println(text2)
+}
 fun controlFlow(){
 	val alarm = 7
 	when (alarm){

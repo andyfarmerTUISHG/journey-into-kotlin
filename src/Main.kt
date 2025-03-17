@@ -6,8 +6,7 @@ fun main(){
 }
 
 fun getMax(num1: Int, num2: Int):Int{
-	val max = if(num1 > num2) num1 else num2
-	return max
+	return if(num1 > num2) num1 else num2
 }
 fun mainDataTypes() {
 	println("Welcome to Main - Learning")

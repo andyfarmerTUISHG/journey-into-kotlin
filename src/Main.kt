@@ -3,9 +3,25 @@ package src
 fun main(){
 	val max = getMax(5,9)
 	println("Max value is $max")
+	val maxDouble = getMax(5.5,9.9)
+	println("MaxDouble value is $maxDouble")
+	val maxTripleInt = getMax(9,6,17)
+	println("maxTripleInt value is $maxTripleInt")
 }
 
 fun getMax(num1: Int, num2: Int):Int{
+	return if(num1 > num2) num1 else num2
+}
+fun getMax(num1: Int, num2: Int, num3: Int):Int{
+	if(num1 >= num2 && num1 >= num3){
+		return num1
+	} else if (num2 >= num1 && num2 >= num3){
+		return num2
+	} else {
+		return num3
+	}
+}
+fun getMax(num1: Double, num2: Double):Double{
 	return if(num1 > num2) num1 else num2
 }
 fun mainDataTypes() {

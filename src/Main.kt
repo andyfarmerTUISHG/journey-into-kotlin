@@ -32,6 +32,39 @@ fun main() {
 	commentsDetails()
 	terminalSplit("If Else Example")
 	ifelseDetails()
+	terminalSplit("Combined Operator Example")
+	combinedOperator()
+	terminalSplit("Control Flow Example")
+	controlFlow()
+}
+
+fun controlFlow(){
+	val alarm = 7
+	when (alarm){
+		12, 7, 14 -> println("Wake Up - the time is $alarm")
+//		7 -> println("Wake Up - the time is $alarm")
+//		14 -> println("Wake Up - the time is $alarm")
+		in 1..10 -> println("It is the range 1..10 $alarm")
+		else -> println("Stay asleep Up - the time is $alarm")
+	}
+}
+
+fun combinedOperator(){
+	val isPlaying = true
+	val score = 80
+	if (isPlaying && score == 100) {
+		println("Next Level Opened")
+	} else {
+		println("still at the same level")
+	}
+	println("OR Operator")
+	val num1 = 0
+	val num2 = 0
+	if (num1 > 0 || num2 > 0) {
+		println("At least one is greater than zero")
+	} else {
+		println("Both are less than zero")
+	}
 }
 
 fun ifelseDetails(){
@@ -41,6 +74,23 @@ fun ifelseDetails(){
 	} else {
 		println("User is Inactive")
 	}
+
+	val grade = 54
+	// greater than / less than operators short example
+	// Currently Greater than >
+	if (grade > 90) {
+		println("You got a Distinction")
+	} else  if (grade >= 70)	{
+		println("You got a Merit")
+	} else if (grade >= 50) {
+		println("You got a pass")
+	} else {
+		println("You got a Fail")
+	}
+
+	// Ternary Operator
+	val result = if (grade >= 50) "Pass" else "Fail"
+	println("Your Result is $result")
 }
 fun commentsDetails(){
 	println("Not going to see much here!!!")

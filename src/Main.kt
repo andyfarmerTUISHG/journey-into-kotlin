@@ -55,6 +55,13 @@ fun numberOptions(){
 
 	println("Long:\nLong Max =  $maxLongVal")
 	println("Long Min = $minLongVal")
+
+	val myNumber = 28 // the default number inference is Int
+	// If you want something else you must infer explicity
+	// or, as a long
+	var myNumberAsLong = 28L
+
+
 }
 
 fun terminalSplit(terminalTitle: String ){

@@ -1,10 +1,29 @@
 package src
+import src.oop.Car
 import src.oop.examples as oop
 import src.learning.examples as learning
 
+
 fun main(){
 	oop.andy()
-	learningCall()
+	creatingCars()
+}
+
+fun creatingCars(){
+	// Instation of a car
+	var car1 = Car()
+	car1.name = "Ford"
+	car1.model = "Fiesta"
+	car1.colour = "Candy Blue"
+	car1.doors = 5
+
+	println("Name= ${car1.name}")
+	println("Name= ${car1.model}")
+	println("Name= ${car1.colour}")
+	println("Name= ${car1.doors}")
+
+	car1.move()
+	car1.stop()
 }
 
 fun learningCall() {

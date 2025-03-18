@@ -1,6 +1,57 @@
 package src
 
 fun main() {
+	challenge()
+}
+fun challenge(){
+	terminalSplit("Challenge")
+	println("" +
+		"Create an arbitary range of numbers" +
+		"Determine if the number is even or odd" +
+		"If the number is even, out put the number" +
+		"Count all the even numbers and display the total"
+	)
+	//	challengeSolo(1,2,3,4,7,8,12,15,16)
+	challengeWalkthrough(1,10)
+}
+fun challengeSolo(vararg numbers: Int){
+	var evenTotal = 0
+	for(number in numbers) {
+		if(number % 2 == 0) {
+		println(number)
+
+		evenTotal += number
+			}
+	}
+	println("evenTotal = $evenTotal")
+}
+
+fun challengeWalkthrough(startNumber:Int, lastNumber:Int){
+	if(startNumber < lastNumber) {
+		var number = startNumber
+		var evenNumberCount = 0
+		var evenNumberTotal = 0
+		while (number <= lastNumber){
+			number++
+			if(!challenge01isEven(number)){
+				continue
+			}
+			println("$number")
+			evenNumberCount++
+			evenNumberTotal += number
+
+		}
+		println("There were $evenNumberCount - and the total = $evenNumberTotal")
+	} else {
+		println("numbers are invlaid")
+		return
+	}
+}
+
+fun challenge01isEven(number:Int): Boolean{
+	return number % 2 == 0
+}
+fun mainLoops() {
 	terminalSplit("Loops")
 //	loopDetails()
 //	conditionalLoop()

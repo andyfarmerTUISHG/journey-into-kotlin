@@ -1,8 +1,39 @@
 package src
 
-fun main() {
-	challenge()
+fun main(){
+	val integerArray = arrayOf(150,2,4,12,14,16,6,8,10,18,20,100,1)
+	arrayChallenge(integerArray)
 }
+
+fun arrayChallenge(integerArray: Array<Int>) {
+	var array = integerArray
+	findMaxNumber(array)
+	findMinNumber(array)
+	//take an array of Int
+	//from a function receive the array determine the largest number
+	// from another fucntion receive the same array and determine the smallest number
+	//from a 3rd function - return the largest and smallest
+}
+fun findMaxNumber(integerArray: Array<Int>) {
+	println(integerArray.max())
+}
+fun findMinNumber(integerArray: Array<Int>){
+	println(integerArray.min())
+}
+fun arrayTest() {
+	val names = arrayOf("Andy","Michelle","Brooke","Riley")
+	val numbers = arrayOf(4,5,6,7,"name",'1')
+	println("${names[1]}")
+	println("The size of the array is ${names.size}")
+
+	for (name in names){
+		println("names: $name")
+	}
+	for ( number in numbers){
+		println("$number - ${number}")
+	}
+}
+
 fun challenge(){
 	terminalSplit("Challenge")
 	println("" +

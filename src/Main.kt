@@ -1,12 +1,17 @@
 package src
 import src.oop.Car
+import src.oop.User
 import src.oop.examples as oop
 import src.learning.examples as learning
 
 
 fun main(){
 	oop.andy()
-	creatingCars()
+//	creatingCars()
+	val user = User("Andy", "Farmer" , 48)
+	val user2 = User("Brooke", "Farmer", 20)
+	val fido = Classes.Animal("Dog",4, true)
+	println("Name of user1 ${user.name}\nName of user2 ${user2.name}")
 }
 
 fun creatingCars(){

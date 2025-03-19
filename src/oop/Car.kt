@@ -1,11 +1,11 @@
 package src.oop
 
-class Car {
-	//properties of a car
-	var name = ""
-	var model = ""
-	var colour = ""
-	var doors = 0
+class Car(//properties of a car
+	var name: String,
+	var model: String,
+	var colour:String,
+	var doors: Int) {
+
 
 	fun move(){
 		println("Car $name $model is moving")

@@ -10,8 +10,12 @@ fun main(){
 //	creatingCars()
 	val user = User("Andy", "Farmer" , 48)
 	val user2 = User("Brooke", "Farmer", 20)
-	val fido = Classes.Animal("Dog",4, true)
+	val unknownUser = User("John")
+	val unknownUser2 = User("Jane", "Doe")
 	println("Name of user1 ${user.name}\nName of user2 ${user2.name}")
+	println("Unknown User created with a secoondary constructor")
+	println("${unknownUser.name} ${unknownUser.lastname} ${unknownUser.age}")
+	println("${unknownUser2.name} ${unknownUser2.lastname} ${unknownUser2.age}")
 }
 
 fun creatingCars(){

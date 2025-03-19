@@ -10,12 +10,19 @@ class User(
 	var name: String
 
 	init {
-	    if(name.toLowerCase().startsWith("a")) {
+	    if(name.lowercase().startsWith("a") || name.lowercase().startsWith("j")) {
 			this.name = name
 		} else {
 			this.name = "User"
-			println("The name (${name}) does not start with the Letter 'a' or 'A'")
+			println("The name (${name}) does not start with the Letter 'a' or 'A' or 'j' or 'J'")
 		}
 	}
 	// you can have multiple init blocks
+
+	//Secondary Constructors - you can have multiple
+	constructor(name:String) : this(name, "User-Lastname", 0)
+	constructor(name: String, lastname: String) : this(name, lastname, 0){
+		println("3rd constructor used")
+	}
+
 }

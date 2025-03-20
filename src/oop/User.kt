@@ -3,19 +3,19 @@ package src.oop
 // You can specify default values in the original constructor
 class User(
 	firstname: String,
-	middleName: String,
+	middleName: String =  "",
 	var lastname: String = "LastName",
 	var age: Int = 0
 ) {
 	// Only allow names with that start with an A
 	/// need an Initialisation block
-	var name: String
+	var firstname: String
 
 	init {
 	    if(firstname.lowercase().startsWith("a") || firstname.lowercase().startsWith("j")) {
-			this.name = firstname
+			this.firstname = firstname
 		} else {
-			this.name = "User"
+			this.firstname = "User"
 			println("The firstname (${firstname}) does not start with the Letter 'a' or 'A' or 'j' or 'J'")
 		}
 	}
@@ -32,10 +32,12 @@ class User(
 	// from the parameter
 	var middleName = middleName
 		// Default Generated Code for Middle Name
+		// The ID
 		get() {
-			return field
+			return "*** Middle Name: $field ***"
 		}
 		set(value){
+			println("Line40 - MiddleName Property assign to $middleName")
 			field = value
 		}
 }

@@ -1,4 +1,5 @@
 package src
+import src.oop.Calculator
 import src.oop.Car
 import src.oop.User
 import src.oop.examples as oop
@@ -7,6 +8,16 @@ import src.learning.examples as learning
 
 fun main(){
 	oop.andy()
+	terminalSplit("Calculator Class")
+	println("Get Constanct from class - ${Calculator.intType}")
+	println("Sum = ${Calculator.sum(2,3)}")
+	println("Subtract = ${Calculator.subtract(2,3)}")
+	println("Multiply = ${Calculator.multiply(2,3)}")
+	println("Divide = ${Calculator.divide(5,2)}")
+}
+
+fun oopExamples() {
+
 //	creatingCars()
 	val user = User("Andy", lastname = "Farmer" , age = 48)
 	val user2 = User("Brooke",  lastname = "Farmer", age = 20)
@@ -18,7 +29,6 @@ fun main(){
 
 	println("${user.firstname}'s favourite move is ${user.favouriteMove}")
 }
-
 fun creatingCars(){
 	// Instation of a car
 	var car1 = Car(model = "Ford", name = "Fiesta" , colour ="Candy Blue" ,doors= 5)

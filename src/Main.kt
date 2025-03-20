@@ -9,18 +9,11 @@ fun main(){
 	oop.andy()
 //	creatingCars()
 	val user = User("Andy", lastname = "Farmer" , age = 48)
-	val user2 = User("Brooke", "Farmer", age = 20)
+	val user2 = User("Brooke",  lastname = "Farmer", age = 20)
 	val unknownUser = User("John")
-	val unknownUser2 = User("Jane", "Doe")
-	println("Name of user1 ${user.firstname}\nName of user2 ${user2.firstname}")
-	println("Unknown User created with a secoondary constructor")
-	println("${unknownUser.firstname} ${unknownUser.lastname} ${unknownUser.age}")
-	println("${unknownUser2.firstname} ${unknownUser2.lastname} ${unknownUser2.age}")
-	println("MiddleName Example")
+	val unknownUser2 = User("Jane", lastname = "Doe")
 	val userMiddle = User("Jack","Steven" , "Jacobs")
-	println("${userMiddle.firstname} - their middleName is ${userMiddle.middleName}")
-	userMiddle.middleName = "New Middle Name"
-	println("${userMiddle.firstname} - their middleName is ${userMiddle.middleName}")
+
 }
 
 fun creatingCars(){

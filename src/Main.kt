@@ -14,6 +14,9 @@ fun main(){
 	val unknownUser2 = User("Jane", lastname = "Doe")
 	val userMiddle = User("Jack","Steven" , "Jacobs")
 
+	user.favouriteMove = "The Matrix"
+
+	println("${user.firstname}'s favourite move is ${user.favouriteMove}")
 }
 
 fun creatingCars(){

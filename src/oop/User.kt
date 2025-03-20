@@ -7,7 +7,10 @@ class User(
 	var lastname: String = "LastName",
 	var age: Int = 0
 ) {
-
+	// for a value not set at point of contruction
+	// you can use lateinit
+	lateinit var favouriteMove: String
+	// lateint cannot be used for primitive data types, Boolean or Char
 
 	//Secondary Constructors - you can have multiple
 //	constructor(firstname:String) : this(firstname, "User-Lastname", 0)

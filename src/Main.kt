@@ -8,34 +8,19 @@ import src.learning.examples as learning
 
 fun main(){
 	terminalSplit("Singleton")
-	terminalSplit("Singleton")
 	// Ensure you only have 1 instance of an object across the application
 	// ie one datatbase
-	val instance = Database.getInstance()
-	// Settings another - you still have the same
-	val instance2 = Database.getInstance()
-	println(instance)
-	println(instance2)
+	println(Database)
+	println(Database)
 
 
 
 }
 
-/*
- Old way of creating a Singleton
- */
-class Database private constructor(){
-	companion object {
-		private var instance: Database? = null
-
-		fun getInstance(): Database? {
-			if ( instance == null) {
-				instance = Database()
-			}
-
-			return instance
-
-		}
+object Database {
+	// will be created the first time you call it
+	init {
+		println("Database Created")
 	}
 }
 

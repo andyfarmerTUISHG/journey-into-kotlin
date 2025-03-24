@@ -7,16 +7,25 @@ import src.learning.examples as learning
 
 
 fun main(){
-	terminalSplit("Singleton")
-	// Ensure you only have 1 instance of an object across the application
-	// ie one datatbase
-	println(Database)
-	println(Database)
-
-
+	lazyInitialisation()
 
 }
 
+fun lazyInitialisation() {
+	terminalSplit("Lazy initialisation")
+	// using user class
+	val user1 = User("Andy", lastname = "Farmer", age = 48)
+	val user2 = User("Riley", lastname = "Farmer", age = 18)
+	// by using by lazy - the object is only created when it is called
+	val user3Lazy by lazy {
+		User("Brooke", lastname = "Farmer", age = 20)
+	}
+	println("Artifical block in user3Lazy 200")
+	Thread.sleep(2000)
+	println("My lazy user is ${user3Lazy.firstname}")
+}
+
+// Create a Singleton
 object Database {
 	// will be created the first time you call it
 	init {

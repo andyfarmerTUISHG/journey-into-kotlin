@@ -1,4 +1,5 @@
 package src
+
 import src.oop.Calculator
 import src.oop.Car
 import src.oop.User
@@ -6,9 +7,22 @@ import src.oop.examples as oop
 import src.learning.examples as learning
 
 
-fun main(){
-	lazyInitialisation()
+fun main() {
+	enums()
+}
 
+fun enums() {
+	terminalSplit("Enums")
+	// A Fixed set of values
+	// can have properties and funtions
+	println(Direction.WEST)
+	println(Direction.EAST)
+	println(Direction.NORTH)
+	println(Direction.SOUTH)
+}
+
+enum class Direction {
+	NORTH, SOUTH, EAST, WEST
 }
 
 fun lazyInitialisation() {
@@ -33,30 +47,32 @@ object Database {
 	}
 }
 
-fun calculator(){
+fun calculator() {
 	terminalSplit("Calculator Class")
 	println("Get Constanct from class - ${Calculator.intType}")
-	println("Sum = ${Calculator.sum(2,3)}")
-	println("Subtract = ${Calculator.subtract(2,3)}")
-	println("Multiply = ${Calculator.multiply(2,3)}")
-	println("Divide = ${Calculator.divide(5,2)}")
+	println("Sum = ${Calculator.sum(2, 3)}")
+	println("Subtract = ${Calculator.subtract(2, 3)}")
+	println("Multiply = ${Calculator.multiply(2, 3)}")
+	println("Divide = ${Calculator.divide(5, 2)}")
 }
+
 fun oopExamples() {
 
 //	creatingCars()
-	val user = User("Andy", lastname = "Farmer" , age = 48)
-	val user2 = User("Brooke",  lastname = "Farmer", age = 20)
+	val user = User("Andy", lastname = "Farmer", age = 48)
+	val user2 = User("Brooke", lastname = "Farmer", age = 20)
 	val unknownUser = User("John")
 	val unknownUser2 = User("Jane", lastname = "Doe")
-	val userMiddle = User("Jack","Steven" , "Jacobs")
+	val userMiddle = User("Jack", "Steven", "Jacobs")
 
 	user.favouriteMove = "The Matrix"
 
 	println("${user.firstname}'s favourite move is ${user.favouriteMove}")
 }
-fun creatingCars(){
+
+fun creatingCars() {
 	// Instation of a car
-	var car1 = Car(model = "Ford", name = "Fiesta" , colour ="Candy Blue" ,doors= 5)
+	var car1 = Car(model = "Ford", name = "Fiesta", colour = "Candy Blue", doors = 5)
 
 	println("Name = ${car1.name}")
 	println("Name = ${car1.model}")
@@ -69,10 +85,9 @@ fun creatingCars(){
 
 fun learningCall() {
 	println("Moved intial learning to learning class")
-	val integerArray = arrayOf(150,2,4,12,14,16,6,8,10,18,20,100,1)
+	val integerArray = arrayOf(150, 2, 4, 12, 14, 16, 6, 8, 10, 18, 20, 100, 1)
 	learning.arrayChallenge(integerArray)
 }
-
 
 
 fun terminalSplit(terminalTitle: String) {

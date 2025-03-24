@@ -9,7 +9,9 @@ import src.learning.examples as learning
 
 fun main() {
 //	enums()
-	val direction = Direction.WEST
+//	val direction = Direction.WEST
+	val direction = Direction.valueOf("WEST")
+//	val invalidDirection = Direction.valueOf("west") // case sensitive
 
 	when(direction){
 		Direction.EAST -> println("The direction is East")

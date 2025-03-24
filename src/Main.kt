@@ -7,7 +7,39 @@ import src.learning.examples as learning
 
 
 fun main(){
-	oop.andy()
+	terminalSplit("Singleton")
+	terminalSplit("Singleton")
+	// Ensure you only have 1 instance of an object across the application
+	// ie one datatbase
+	val instance = Database.getInstance()
+	// Settings another - you still have the same
+	val instance2 = Database.getInstance()
+	println(instance)
+	println(instance2)
+
+
+
+}
+
+/*
+ Old way of creating a Singleton
+ */
+class Database private constructor(){
+	companion object {
+		private var instance: Database? = null
+
+		fun getInstance(): Database? {
+			if ( instance == null) {
+				instance = Database()
+			}
+
+			return instance
+
+		}
+	}
+}
+
+fun calculator(){
 	terminalSplit("Calculator Class")
 	println("Get Constanct from class - ${Calculator.intType}")
 	println("Sum = ${Calculator.sum(2,3)}")
@@ -15,7 +47,6 @@ fun main(){
 	println("Multiply = ${Calculator.multiply(2,3)}")
 	println("Divide = ${Calculator.divide(5,2)}")
 }
-
 fun oopExamples() {
 
 //	creatingCars()

@@ -19,10 +19,24 @@ fun enums() {
 	println(Direction.EAST)
 	println(Direction.NORTH)
 	println(Direction.SOUTH)
+
+	println("Looping through enums as defined in the class")
+	for (direction in Direction.values()) {
+		println("Direction = $direction")
+	}
+
+	println("Display values from the enum")
+	println("Direction = ${Direction.SOUTH.name}")
+	println("Direction = ${Direction.SOUTH.direction}")
+	println("Direction = ${Direction.SOUTH.distance}")
 }
 
-enum class Direction {
-	NORTH, SOUTH, EAST, WEST
+enum class Direction(var direction: String, var distance: Int) {
+	NORTH(direction = "North", distance = 100),
+	SOUTH(direction = "South", distance = 200),
+	EAST(direction = "East", distance = 300),
+	WEST(direction = "West", distance = 400)
+
 }
 
 fun lazyInitialisation() {

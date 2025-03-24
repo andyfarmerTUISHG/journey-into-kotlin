@@ -8,7 +8,15 @@ import src.learning.examples as learning
 
 
 fun main() {
-	enums()
+//	enums()
+	val direction = Direction.WEST
+
+	when(direction){
+		Direction.EAST -> println("The direction is East")
+		Direction.NORTH -> println("The direction is North")
+		Direction.WEST -> println("The direction is West")
+		Direction.SOUTH -> println("The direction is South")
+	}
 }
 
 fun enums() {

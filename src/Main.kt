@@ -8,7 +8,30 @@ import src.learning.examples as learning
 
 
 fun main() {
-//	enums()
+	innerClasses()
+}
+
+fun innerClasses() {
+	terminalSplit("Inner classes")
+	println("classes which are declared inside another class and they are generally used when you know that there is a very close relationship between two classes")
+
+	val listView = ListView(arrayOf("Item 1", "Item 2", "Item 3"))
+	listView.ListViewItem().displayItem(1)
+}
+
+class ListView(val items: Array<String>) {
+
+	inner class  ListViewItem(){
+
+		fun displayItem(position: Int){
+			println(items[position])
+		}
+	}
+}
+
+fun enums() {
+	terminalSplit("Enums")
+	//	enums()
 //	val direction = Direction.WEST
 	val direction = Direction.valueOf("WEST")
 //	val invalidDirection = Direction.valueOf("west") // case sensitive
@@ -19,10 +42,7 @@ fun main() {
 		Direction.WEST -> println("The direction is West")
 		Direction.SOUTH -> println("The direction is South")
 	}
-}
 
-fun enums() {
-	terminalSplit("Enums")
 	// A Fixed set of values
 	// can have properties and funtions
 	println(Direction.WEST)

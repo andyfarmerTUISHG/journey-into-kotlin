@@ -7,10 +7,8 @@ import src.learning.examples as learning
 
 
 fun main() {
-	terminalSplit("inheritance check")
-	Inheritance().hello()
-	terminalSplit("Abstract Class")
-	AbstractClasses().hello()
+	terminalSplit("Data Class")
+	DataClass().hello()
 
 }
 

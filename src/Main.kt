@@ -7,8 +7,8 @@ import src.learning.examples as learning
 
 
 fun main() {
-	terminalSplit("Data Class")
-	DataClass().hello()
+	terminalSplit("Interfaces")
+	Interfaces().hello()
 
 }
 

@@ -7,8 +7,8 @@ import src.learning.examples as learning
 
 
 fun main() {
-	terminalSplit("Inheritance")
-	Inheritance().hello()
+	terminalSplit("Sealed Class")
+	SealedClass().hello()
 
 }
 

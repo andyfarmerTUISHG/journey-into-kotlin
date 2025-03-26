@@ -8,7 +8,7 @@ import src.learning.examples as learning
 
 fun main() {
 	terminalSplit("Interfaces")
-	Interfaces().hello()
+	ObjectExpression().hello()
 
 }
 

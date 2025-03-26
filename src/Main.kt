@@ -7,8 +7,10 @@ import src.learning.examples as learning
 
 
 fun main() {
-	terminalSplit("Sealed Class")
-	SealedClass().hello()
+	terminalSplit("inheritance check")
+	Inheritance().hello()
+	terminalSplit("Abstract Class")
+	AbstractClasses().hello()
 
 }
 

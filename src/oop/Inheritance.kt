@@ -11,6 +11,9 @@ class Inheritance {
 		val cesna = Plane(model = "Cessna", name = "Cessna 172", colour = "White", doors = 2,engines = 2,  wings = 2)
 		cesna.move()
 		cesna.stop()
+
+		var kawasaki = Motorbike(model = "fast one", name = "Kawasaki", colour = "Red", engines = 1, doors = 0)
+		kawasaki.move()
 	}
 }
 
@@ -22,6 +25,10 @@ open class Vehicle(val name: String, val model: String, val colour: String, val 
 	open fun stop(){
 		println("$name  has stopped")
 	}
+}
+
+class Motorbike(name: String, model: String, colour: String, engines: Int, doors: Int) : Vehicle(name, model, colour, engines, doors){
+
 }
 
 class Plane(name: String, model: String, colour:  String, engines: Int, doors: Int, val wings: Int) : Vehicle(name, model, colour, engines, doors) {

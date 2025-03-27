@@ -7,8 +7,8 @@ import src.learning.examples as learning
 
 
 fun main() {
-	terminalSplit("Interfaces")
-	ObjectExpression().hello()
+	terminalSplit("Delegation")
+	Delegation().hello()
 
 }
 
